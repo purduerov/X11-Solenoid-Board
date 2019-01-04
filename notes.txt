@@ -1,0 +1,11 @@
+Fix airwires
+Min trace width of 10 for signals, 30 for power
+Leave pads straight out instead of skewed
+Keep a trace width between traces
+Add a GND polygon to the bottom side
+Via stitch the GND planes
+Mounting holes/standoffs, make sure they are aligned and sane. You might only fit 3, thats ok
+SW, 12V, 24V, related should be width 30
+Do not route anything through the region near an oscillator
+Swap CAN_H, CAN_L with +12V, GND on the input T2I connector, move the CAN transceiver down instead
+Bulk cap goes up top
