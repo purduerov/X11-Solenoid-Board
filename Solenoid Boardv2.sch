@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10115,10 +10115,10 @@ STAND-OFF</description>
 <attribute name="VALUE" x="104.775" y="22.225" size="1.778" layer="96"/>
 </instance>
 <instance part="+12V" gate="VCC" x="30.48" y="40.64">
-<attribute name="VALUE" x="27.94" y="43.815" size="1.778" layer="96"/>
+<attribute name="VALUE" x="27.94" y="38.1" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="24V" gate="VCC" x="121.92" y="22.86">
-<attribute name="VALUE" x="119.38" y="26.035" size="1.778" layer="96"/>
+<attribute name="VALUE" x="119.38" y="20.32" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="SUPPLY8" gate="GND" x="45.72" y="101.6">
 <attribute name="VALUE" x="43.815" y="98.425" size="1.778" layer="96"/>
@@ -10297,7 +10297,10 @@ STAND-OFF</description>
 <instance part="GND12" gate="1" x="177.8" y="139.7">
 <attribute name="VALUE" x="175.26" y="137.16" size="1.778" layer="96"/>
 </instance>
-<instance part="U$4" gate="A" x="220.98" y="101.6"/>
+<instance part="U$4" gate="A" x="220.98" y="101.6">
+<attribute name="NAME" x="218.44" y="111.76" size="1.27" layer="95"/>
+<attribute name="VALUE" x="223.52" y="96.52" size="1.27" layer="95"/>
+</instance>
 <instance part="GND13" gate="1" x="220.98" y="88.9">
 <attribute name="VALUE" x="218.44" y="86.36" size="1.778" layer="96"/>
 </instance>
@@ -10305,14 +10308,17 @@ STAND-OFF</description>
 <attribute name="VALUE" x="236.22" y="109.22" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="+12V1" gate="VCC" x="203.2" y="114.3">
-<attribute name="VALUE" x="200.66" y="117.475" size="1.778" layer="96"/>
+<attribute name="VALUE" x="200.66" y="111.76" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C7" gate="G$1" x="17.78" y="86.36"/>
+<instance part="C7" gate="G$1" x="17.78" y="86.36">
+<attribute name="NAME" x="18.796" y="86.995" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="18.796" y="82.169" size="1.778" layer="96" font="vector"/>
+</instance>
 <instance part="SUPPLY6" gate="GND" x="17.78" y="76.2">
 <attribute name="VALUE" x="15.875" y="73.025" size="1.778" layer="96"/>
 </instance>
 <instance part="+12V2" gate="VCC" x="17.78" y="93.98">
-<attribute name="VALUE" x="15.24" y="97.155" size="1.778" layer="96"/>
+<attribute name="VALUE" x="15.24" y="91.44" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="H1" gate="G$1" x="10.16" y="200.66"/>
 <instance part="H2" gate="G$1" x="10.16" y="198.12"/>
@@ -10564,11 +10570,6 @@ STAND-OFF</description>
 </net>
 <net name="+12V" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="76.2" x2="35.56" y2="81.28" width="0.1524" layer="91"/>
-<label x="35.56" y="78.74" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
 <wire x1="53.34" y1="40.64" x2="53.34" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -10607,6 +10608,11 @@ STAND-OFF</description>
 <pinref part="C7" gate="G$1" pin="+"/>
 <wire x1="17.78" y1="91.44" x2="17.78" y2="88.9" width="0.1524" layer="91"/>
 <label x="17.78" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="4"/>
+<wire x1="40.64" y1="76.2" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
+<label x="40.64" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -10682,11 +10688,6 @@ STAND-OFF</description>
 </net>
 <net name="CAN_H" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="3"/>
-<wire x1="38.1" y1="76.2" x2="38.1" y2="81.28" width="0.1524" layer="91"/>
-<label x="38.1" y="78.74" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
 <pinref part="U$8" gate="G$1" pin="CANH"/>
 <wire x1="137.16" y1="170.18" x2="154.94" y2="170.18" width="0.1524" layer="91"/>
 <label x="147.32" y="170.18" size="1.778" layer="95"/>
@@ -10697,13 +10698,13 @@ STAND-OFF</description>
 <wire x1="195.58" y1="175.26" x2="195.58" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="177.8" x2="228.6" y2="177.8" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="76.2" x2="35.56" y2="81.28" width="0.1524" layer="91"/>
+<label x="35.56" y="78.74" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="CAN_L" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="4"/>
-<wire x1="40.64" y1="76.2" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
-<label x="40.64" y="78.74" size="1.778" layer="95" rot="R90"/>
-</segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="CANL"/>
 <wire x1="137.16" y1="165.1" x2="154.94" y2="165.1" width="0.1524" layer="91"/>
@@ -10714,6 +10715,11 @@ STAND-OFF</description>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="149.86" x2="195.58" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="147.32" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="3"/>
+<wire x1="38.1" y1="76.2" x2="38.1" y2="81.28" width="0.1524" layer="91"/>
+<label x="38.1" y="78.74" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="SER_IN" class="0">
