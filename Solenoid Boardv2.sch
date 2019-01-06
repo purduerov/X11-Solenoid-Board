@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9967,7 +9967,6 @@ STAND-OFF</description>
 <part name="24V" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+24V"/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="+24V" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+24V"/>
-<part name="+3.3V" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="+3.3V"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="2.2 µF"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
@@ -10025,6 +10024,7 @@ STAND-OFF</description>
 <part name="H1" library="SparkFun-Hardware" library_urn="urn:adsk.eagle:library:519" deviceset="STAND-OFF" device="" package3d_urn="urn:adsk.eagle:package:38630/1"/>
 <part name="H2" library="SparkFun-Hardware" library_urn="urn:adsk.eagle:library:519" deviceset="STAND-OFF" device="" package3d_urn="urn:adsk.eagle:package:38630/1"/>
 <part name="H3" library="SparkFun-Hardware" library_urn="urn:adsk.eagle:library:519" deviceset="STAND-OFF" device="" package3d_urn="urn:adsk.eagle:package:38630/1"/>
+<part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10125,9 +10125,6 @@ STAND-OFF</description>
 </instance>
 <instance part="+24V" gate="VCC" x="154.94" y="124.46">
 <attribute name="VALUE" x="152.4" y="121.92" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3.3V" gate="VCC" x="45.72" y="127">
-<attribute name="VALUE" x="43.18" y="124.46" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C3" gate="G$1" x="60.96" y="129.54" rot="R90">
 <attribute name="NAME" x="60.325" y="130.556" size="1.778" layer="95" rot="R90"/>
@@ -10323,6 +10320,9 @@ STAND-OFF</description>
 <instance part="H1" gate="G$1" x="10.16" y="200.66"/>
 <instance part="H2" gate="G$1" x="10.16" y="198.12"/>
 <instance part="H3" gate="G$1" x="12.7" y="200.66"/>
+<instance part="+3V5" gate="G$1" x="45.72" y="127">
+<attribute name="VALUE" x="43.18" y="121.92" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10666,19 +10666,6 @@ STAND-OFF</description>
 <junction x="154.94" y="121.92"/>
 </segment>
 </net>
-<net name="+3.3V" class="0">
-<segment>
-<pinref part="+3.3V" gate="VCC" pin="VCC"/>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="45.72" y1="124.46" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="129.54" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
-<junction x="58.42" y="124.46"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="114.3" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="CLR" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -10934,6 +10921,17 @@ STAND-OFF</description>
 <wire x1="233.68" y1="106.68" x2="238.76" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="106.68" x2="238.76" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="45.72" y1="124.46" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="129.54" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
+<junction x="58.42" y="124.46"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="114.3" x2="58.42" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="N$4" class="0">
