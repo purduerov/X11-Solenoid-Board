@@ -16,3 +16,4 @@ Still angled traced on decoupling caps below micro. Left some as is
 2 small GND polygons not filling in. 
 +3.3V instead of +3V3. Fixed. Is it ok to run the shift register's power through the same trace as the micro?
 redid +12V around the inductor. +12 now splits 1) to inductor and 2) to cap  and through to IC and SHDN trace
+Should there be ground plane beneath the inductor?
